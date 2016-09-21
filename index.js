@@ -218,8 +218,8 @@ function post(options) {
     request(config, function (error, response, body) {
         if( showTimes ) console.log("NODE-CKAN REQUEST TIME: "+(new Date().getTime() - t)+"ms");
         if( error && !response ) {
-            console.log(error);
-            process.exit(1);
+            console.error(JSON.stringify(error));
+            //process.exit(1);
         }
 
         if (!error && response.statusCode == options.expected ) {
