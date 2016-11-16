@@ -15,6 +15,11 @@ var server = "";
 
 var showTimes = false;
 
+exports.getAPIKey = function()
+{
+    return key;
+}
+
 exports.setKeyFile = function(file) {
     key = require(file).key;
 }
